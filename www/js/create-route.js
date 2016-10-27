@@ -91,6 +91,10 @@ $( document ).ready(function(){
 	var date=new Date();
 	routeFormData.startTime=date.toUTCString();
 	routeFormData.maxPassengers=$('#maxPassengers').val();
+
+	// Retrieve the object from storage
+	var user = JSON.parse(localStorage.getItem('user'));
+	routeFormData.driverId=user.id;
 	
 	var url=apiEndpoint+'/paths';
 		

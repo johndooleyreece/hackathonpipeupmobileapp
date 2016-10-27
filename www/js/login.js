@@ -15,7 +15,8 @@ $( document ).ready(function(){
 			data: data,
 			dataType: 'json',
 			success: function(responseData, textStatus, jqXHR) {
-				localStorage.setItem('user', responseData);
+				// Put the object into storage
+				localStorage.setItem('user', JSON.stringify(responseData));
 			},
 			error: function (responseData, textStatus, errorThrown) {
 				alert('Login failed.');

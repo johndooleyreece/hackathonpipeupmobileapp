@@ -4,7 +4,6 @@ var routeFormData={
 			maxPassengers: 0,
 			startLocation:{},
 			endLocation:{},
-			startDate:null,
 			startTime:null,
 	};
 	
@@ -34,7 +33,7 @@ var placeSearch, startLocationAutocomplete;
         // Get the place details from the autocomplete object.
         var place = startLocationAutocomplete.getPlace();
 		
-		routeFormData.startLocation={name:$('#startLocation').val(), location:place.geometry.location};
+		routeFormData.startLocation={name:$('#startLocation').val(), location:[place.geometry.location.lat(),place.geometry.location.lng()]};
 
        
       }
@@ -43,7 +42,8 @@ var placeSearch, startLocationAutocomplete;
         // Get the place details from the autocomplete object.
         var place = endLocationAutocomplete.getPlace();
 
-        routeFormData.endLocation={name:$('#endLocation').val(), location:place.geometry.location};
+        routeFormData.endLocation={name:$('#endLocation').val(), location:[place.geometry.location.lat(),place.geometry.location.lng()]};
+		
       }
 
       // Bias the autocomplete object to the user's geographical location,
@@ -69,6 +69,7 @@ $( document ).ready(function(){
 	$('#date').bootstrapMaterialDatePicker
 	({
 		time:false,
+		format: 'DD/MM/YYYY',
 		setMinDate: new Date(),
 		clearButton: true
 	});
@@ -82,25 +83,32 @@ $( document ).ready(function(){
 	});
 	
 	
-	$('#create-route-form').submit(function(){
+	$('#create-route-form').submit(function(e){
 		
-	var date	
+		e.preventDefault();
+		
+	var dateStr=$('#date').val()+' '+$('#time').val();
+	var date=new Date();
+	routeFormData.startTime=date.toUTCString();
+	routeFormData.maxPassengers=$('#maxPassengers').val();
 	
-	var url=apiEndpoint+'/users';
+	var url=apiEndpoint+'/paths';
 		
 		$.ajax({
 			type: 'PUT',
 			url: url,
 			crossDomain: true,
-			data: {},
+			data:routeFormData,
 			dataType: 'json',
 			success: function(responseData, textStatus, jqXHR) {
-				alert(responseData.length);
+				alert(responseData.id);
 			},
 			error: function (responseData, textStatus, errorThrown) {
-				alert('POST failed.');
+				alert('Route creation failed.');
 			}
 		});
+		
+		return(false);
 	
 	});
 });

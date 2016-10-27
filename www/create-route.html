@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+
+    <title>Signin</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+	
+	<link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Roboto:300,400,500,700">
+  <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/icon?family=Material+Icons">
+	
+	  <!-- Bootstrap Material Design -->
+  <link rel="stylesheet" type="text/css" href="materials/css/bootstrap-material-design.css">
+  <link rel="stylesheet" type="text/css" href="materials/css/ripples.min.css">
+  <link rel="stylesheet" type="text/css" href="datepicker/css/bootstrap-material-datetimepicker.css">
+  
+
+    <!-- Custom styles for this template -->
+    <link href="signin.css" rel="stylesheet">
+
+  </head>
+
+  <body>
+
+    <div class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="javascript:void(0)">Brand</a>
+    </div>
+    <div class="navbar-collapse collapse navbar-responsive-collapse">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="javascript:void(0)">Active</a></li>
+        <li><a href="javascript:void(0)">Link</a></li>
+        <li class="dropdown">
+          <a href="bootstrap-elements.html" data-target="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown
+            <b class="caret"></b></a>
+          <ul class="dropdown-menu">
+            <li><a href="javascript:void(0)">Action</a></li>
+            <li><a href="javascript:void(0)">Another action</a></li>
+            <li><a href="javascript:void(0)">Something else here</a></li>
+            <li class="divider"></li>
+            <li class="dropdown-header">Dropdown header</li>
+            <li><a href="javascript:void(0)">Separated link</a></li>
+            <li><a href="javascript:void(0)">One more separated link</a></li>
+          </ul>
+        </li>
+      </ul>
+      <form class="navbar-form navbar-left">
+        <div class="form-group">
+          <input class="form-control col-md-8" placeholder="Search" type="text">
+        </div>
+      </form>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="javascript:void(0)">Link</a></li>
+        <li class="dropdown">
+          <a href="bootstrap-elements.html" data-target="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown
+            <b class="caret"></b></a>
+          <ul class="dropdown-menu">
+            <li><a href="javascript:void(0)">Action</a></li>
+            <li><a href="javascript:void(0)">Another action</a></li>
+            <li><a href="javascript:void(0)">Something else here</a></li>
+            <li class="divider"></li>
+            <li><a href="javascript:void(0)">Separated link</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+    
+<form class="form-horizontal" id="create-route-form" >
+  <fieldset>
+    <legend>Legend</legend>
+    <div class="form-group">
+      <label for="inputEmail" class="col-md-2 control-label">Start Location</label>
+
+      <div class="col-md-10">
+        <input class="form-control" name="startLocation" id="startLocation" placeholder="Start Location" type="text" required>
+      </div>
+    </div>
+	<div class="form-group">
+      <label for="inputEmail" class="col-md-2 control-label">End Location</label>
+
+      <div class="col-md-10">
+        <input class="form-control" name="endLocation" id="endLocation" placeholder="End Location" type="text" required>
+      </div>
+    </div>
+	<div class="form-group">
+      <label for="inputEmail" class="col-md-2 control-label">Date</label>
+
+      <div class="col-md-10">
+        <input class="form-control" name="date" id="date" placeholder="Date" type="text" required>
+      </div>
+    </div>
+	<div class="form-group">
+      <label for="inputEmail" class="col-md-2 control-label">Time</label>
+
+      <div class="col-md-10">
+        <input class="form-control" name="time" id="time" placeholder="Time" type="text" required>
+      </div>
+    </div>
+    
+    <div class="form-group">
+      <div class="col-md-10 col-md-offset-2">
+        <button type="button" class="btn btn-default">Cancel</button>
+        <button type="submit" class="btn btn-primary">Next</button>
+      </div>
+    </div>
+  </fieldset>
+</form>
+
+
+	
+    <div class="panel panel-default">
+	  <div class="panel-body">
+		<div id="map"></div>
+	  </div>
+	</div>
+
+
+    <div class="container">
+      <!-- Example row of columns -->
+      <div class="row">
+        <div class="col-md-4">
+          <h2>Heading</h2>
+          <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+          <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
+        </div>
+        <div class="col-md-4">
+          <h2>Heading</h2>
+          <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+          <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
+       </div>
+        <div class="col-md-4">
+          <h2>Heading</h2>
+          <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
+          <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
+        </div>
+      </div>
+
+      <hr>
+
+      <footer>
+        <p>&copy; 2016 Company, Inc.</p>
+      </footer>
+    </div> <!-- /container -->
+
+	
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="bootstrap/bootstrap.min.js"></script>
+	<script type="text/javascript" src="materials/js/material.min.js"></script>
+	<script type="text/javascript" src="js/moment.js"></script>
+	<script type="text/javascript" src="datepicker/js/bootstrap-material-datetimepicker.js"></script>
+	<script type="text/javascript" src="js/socket.io.js"></script>
+	<script type="text/javascript" src="js/my-app.js"></script>
+	<script type="text/javascript" src="js/create-route.js"></script>
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCesrRWWRcpEPdmaqlemr-k9IL-lIGYavo&libraries=places&callback=initAutocomplete" async defer></script>
+
+  </body>
+</html>

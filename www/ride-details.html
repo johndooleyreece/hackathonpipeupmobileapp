@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+
+    <title>Ride Details</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Roboto:300,400,500,700">
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/icon?family=Material+Icons">
+
+    <!-- Bootstrap Material Design -->
+    <link rel="stylesheet" type="text/css" href="materials/css/bootstrap-material-design.css">
+    <link rel="stylesheet" type="text/css" href="materials/css/ripples.min.css">
+    <link rel="stylesheet" type="text/css" href="datepicker/css/bootstrap-material-datetimepicker.css">
+
+
+    <!-- Custom styles for this template -->
+    <link href="css/my-app.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+<div class="navbar navbar-default">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="javascript:void(0)">Brand</a>
+        </div>
+        <div class="navbar-collapse collapse navbar-responsive-collapse">
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="javascript:void(0)">Active</a></li>
+                <li><a href="javascript:void(0)">Link</a></li>
+                <li class="dropdown">
+                    <a href="bootstrap-elements.html" data-target="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown
+                        <b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="javascript:void(0)">Action</a></li>
+                        <li><a href="javascript:void(0)">Another action</a></li>
+                        <li><a href="javascript:void(0)">Something else here</a></li>
+                        <li class="divider"></li>
+                        <li class="dropdown-header">Dropdown header</li>
+                        <li><a href="javascript:void(0)">Separated link</a></li>
+                        <li><a href="javascript:void(0)">One more separated link</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <form class="navbar-form navbar-left">
+                <div class="form-group">
+                    <input class="form-control col-md-8" placeholder="Search" type="text">
+                </div>
+            </form>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="javascript:void(0)">Link</a></li>
+                <li class="dropdown">
+                    <a href="bootstrap-elements.html" data-target="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown
+                        <b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="javascript:void(0)">Action</a></li>
+                        <li><a href="javascript:void(0)">Another action</a></li>
+                        <li><a href="javascript:void(0)">Something else here</a></li>
+                        <li class="divider"></li>
+                        <li><a href="javascript:void(0)">Separated link</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <h2>Congratulations: Your ride is booked</h2>
+        </div>
+        <div class="col-md-12">
+            <h3>Ride Details</h3>
+        </div>
+        <div class="col-md-12 from">
+            <h4>From: </h4>
+            <p></p>
+        </div>
+        <div class="col-md-12 to">
+            <h4>To: </h4>
+            <p></p>
+        </div>
+        <div class="col-md-12 time">
+            <h4>Time: </h4>
+            <p></p>
+        </div>
+    </div>
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-body">
+        <div id="map"></div>
+    </div>
+</div>
+
+
+<div class="container">
+
+
+    <hr>
+
+    <footer>
+        <p>&copy; 2016 Company, Inc.</p>
+    </footer>
+</div> <!-- /container -->
+
+
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="bootstrap/bootstrap.min.js"></script>
+<script type="text/javascript" src="materials/js/material.min.js"></script>
+<script type="text/javascript" src="js/moment.js"></script>
+<script type="text/javascript" src="datepicker/js/bootstrap-material-datetimepicker.js"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCesrRWWRcpEPdmaqlemr-k9IL-lIGYavo&libraries=places&callback=initialize" async defer></script>
+<script type="text/javascript" src="js/ride-details.js"></script>
+
+</body>
+</html>

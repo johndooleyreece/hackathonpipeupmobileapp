@@ -1,0 +1,37 @@
+#map {
+    height: 500px;
+}
+
+.gm-style-iw {
+    background-color: #649af2 !important;
+    padding: 10px 0px !important;
+    color: #ffffff !important;
+}
+.iw-title {
+    font-size: 20px;
+    text-align: center;
+    border-bottom: 2px solid #2e62b6;
+
+}
+.iw-content{
+    margin-left: 10px;
+}
+.iw-subTitle {
+    color: #2e62b6;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.iw-content p{
+    font-size: 14px;
+}
+
+.iw-button {
+    text-align: center;
+}
+
+.iw-button a{
+    padding: 8px 45px;
+    background-color: #2e62b6;
+    color: #FFFFFF !important;
+}

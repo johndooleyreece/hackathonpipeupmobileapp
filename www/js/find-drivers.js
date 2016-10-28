@@ -199,6 +199,12 @@ var routes = [
 ];
 
 function initialize(){
+    var from = user.start_location.name;
+    $('.from p').html(from);
+    var to = user.end_location.name;
+    $('.to p').html(to);
+    var time = user.startTime;
+    $('.time p').html(time);
     var latitude = user.start_location.location[0];
     var longitude = user.start_location.location[1];
     var range = 2;
@@ -214,7 +220,7 @@ function initialize(){
     var map = new google.maps.Map(document.getElementById("map"), myOptions);
     var marker = new google.maps.Marker({
         position: latlng,
-        title: 'Your Location',
+        title: from,
         map: map
     });
 
